@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Happy Night";
+  src: local("Happy Night"), url(./assets/fonts/Happy\ Night.otf) format("truetype");
+}
