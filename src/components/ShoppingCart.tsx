@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ShoppingCart.module.css";
+import { FiShoppingCart } from "react-icons/fi";
 
 interface Props {
 
@@ -18,7 +19,10 @@ class ShoppingCart extends React.Component<Props, State> {
     render() {
         return (
             <div className={styles.cartContainer}>
-                <button className={styles.button} onClick={() => this.setState({dropDown: !this.state.dropDown})}>Shopping Cart: 2 (items)</button>
+                <button className={styles.button} onClick={() => this.setState({dropDown: !this.state.dropDown})}>
+                    <FiShoppingCart />
+                    <span>Shopping Cart: 2 (items)</span>
+                </button>
                 <div className={styles.cartDropDown} style={{display: this.state.dropDown ? "block" : "none"}}>
                     <ul>
                         <li>robot 1</li>
