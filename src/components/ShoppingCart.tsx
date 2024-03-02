@@ -25,7 +25,14 @@ class ShoppingCart extends React.Component<Props, State> {
     // }
 
     handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        this.setState({dropDown: !this.state.dropDown});
+        console.log("e.target: ", e.target); //the element that is clicked on
+        console.log("e.currentTarget: ", e.currentTarget); // the element that invokes this handleClick method
+
+        //Only reacts on clicking on the SPAN, no reaction on clicking on the shopping cart icon
+        if((e.target as HTMLElement).nodeName === "SPAN") {
+            this.setState({dropDown: !this.state.dropDown}); 
+        }
+        
     }
 
     render() {
