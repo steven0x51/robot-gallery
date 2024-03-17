@@ -7,7 +7,7 @@ interface Props {
 }
 
 interface State {
-    dropDown: boolean
+    dropDown: boolean,
 }
 
 class ShoppingCart extends React.Component<Props, State> {
@@ -19,8 +19,8 @@ class ShoppingCart extends React.Component<Props, State> {
 
     // "this" keyword scopes the method not the class,
     // Need to bind this in constructor, or use arrow function instead
-    //
     // handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    //     console.log("type of this:", this);
     //     this.setState({dropDown: !this.state.dropDown});
     // }
 
@@ -32,7 +32,6 @@ class ShoppingCart extends React.Component<Props, State> {
         if((e.target as HTMLElement).nodeName === "SPAN") {
             this.setState({dropDown: !this.state.dropDown}); 
         }
-        
     }
 
     render() {
