@@ -13,7 +13,7 @@ interface State {
 class ShoppingCart extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
-        this.state = { dropDown: false }
+        this.state = { dropDown: false };
         // this.handleClick = this.handleClick.bind(this);
     }
 
