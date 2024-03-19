@@ -25,6 +25,8 @@ class App extends React.Component<Props, State> {
         };
     }
 
+    // fetch() and response => respnse.json() return a promise
+    // TODO: study promise
     componentDidMount(): void {
         fetch("https://jsonplaceholder.typicode.com/users")
         .then(response => response.json())
