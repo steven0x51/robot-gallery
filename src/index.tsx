@@ -3,13 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ShoppingCartStateProvider } from "./components/ShoppingCartStateProvider"
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const defaultContextValue = {
+  userName: "Q"
+}
+
+export const appContext = React.createContext(defaultContextValue);
+
 root.render(
   <React.StrictMode>
-    <App />
+    <appContext.Provider value={defaultContextValue}>
+      <ShoppingCartStateProvider>
+        <App />
+      </ShoppingCartStateProvider>
+    </appContext.Provider>
   </React.StrictMode>
 );
 
